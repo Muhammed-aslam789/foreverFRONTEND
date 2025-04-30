@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+a.active hr{
+    display: block;
+} 
+*{
+    font-family: 'Poppins', 'sans-serif';
+}
+/* .prata-regular {
+    font-family: "Prata", serif;
+    font-weight: 400;
+    font-style: normal;
+  } */
+
+  ::-webkit-scrollbar{
+    display: none;
+  }
+  
+  @media (max-width:640px) {
+    a.active{
+        background-color: black;
+        color:white;
+    }
+  }
