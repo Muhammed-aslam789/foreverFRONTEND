@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import axios from 'axios'
+import { ShopContext } from '../context/ShopContext'
 
 const NewsLetterBox = () => {
+    const {backendUrl} = useContext(ShopContext); 
     const [email, setemail] = useState("")
 
     const onSubmitHandler = async () => {
-        await axios.post("http://localhost:4000/api/mail/send", { email: email }).then((respose) => { console.log(respose) }).catch((err) => console.log(err))
+        await axios.post(backendUrl + "/api/mail/send", { email: email }).then((respose) => { console.log(respose) }).catch((err) => console.log(err))
     }
 
     return (
